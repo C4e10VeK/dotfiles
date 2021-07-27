@@ -1,6 +1,6 @@
 #### Clone this repository to get Vundle
 
-### For VIM and NVIM:
+### Install Vundle for Vim:
 ```bash
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
