@@ -1,18 +1,10 @@
 #### Clone this repository to get Vundle
 
-### For VIM:
+### For VIM and NVIM:
 ```bash
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 ```
-
-### For NVIM:
-```bash
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.config/nvim/bundle/Vundle.vim
-
-```
-
-
 #### After last update coc-nvim has error. 
 #### Download last release from repository and unzip to bundle directory
 
