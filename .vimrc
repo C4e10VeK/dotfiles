@@ -10,18 +10,11 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-"Plugin 'davidhalter/jedi-vim'
-"Plugin 'flazz/vim-colorschemes'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-"Plugin 'morhetz/gruvbox'
 Plugin 'joshdick/onedark.vim'
-"Plugin 'Valloric/YouCompleteMe'
-"Plugin 'rip-rip/clang_complete'
-"Plugin 'rust-lang/rust.vim'
-"Plugin 'valloric/youcompleteme'
 Plugin 'scrooloose/nerdtree'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ncm2/ncm2'
@@ -104,8 +97,6 @@ set visualbell t_vb=
 let g:airline_theme='jellybeans'
 
 colorscheme jellybeans
-"colorscheme onedark
-"colorscheme gruvbox
 set background=dark
 
 map <C-n> :NERDTreeToggle<CR>
