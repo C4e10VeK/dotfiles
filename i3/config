@@ -68,20 +68,6 @@ exec xinput --set-prop 12 300 -1
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-#VSCodium
-#bindsym $mod+Shift+v exec vscodium
-#Emacs
-#bindsym $mod+Shift+m exec emacs
-#QtCreator
-bindsym $mod+Shift+c exec qtcreator
-#Pycharm IDE
-#bindsym $mod+Shift+p exec pycharm
-#Intellij-Idea IDE
-#bindsym $mod+Shift+j exec idea
-#Spyder
-#bindsym $mod+Shift+p exec spyder
-#Eclipse IDE
-#bindsym $mod+Shift+j exec $HOME/eclipse.sh
 #Vim
 bindsym $mod+Shift+b exec urxvt -e vim
 
@@ -106,10 +92,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-#bindsym $mod+Shift+j move left
-#bindsym $mod+Shift+k move down
-#bindsym $mod+Shift+l move up
-#bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
