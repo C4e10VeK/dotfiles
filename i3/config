@@ -29,7 +29,6 @@ font pango:JetBrains Mono NL 8
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-
 # Hybrid colors
 set $background         #161616
 set $black              #a3a3a3
@@ -41,7 +40,6 @@ set $green              #a3c38b
 set $blue               #a6cae2
 set $magenta            #e7cdfb
 set $cyan               #00a69f
-
 
 #class                  border          backgr.         text            split
 client.focused          $background     $background     $background     $background
@@ -80,10 +78,10 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-#bindsym $mod+j focus left
-#bindsym $mod+k focus down
-#bindsym $mod+l focus up
-#bindsym $mod+semicolon focus right
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -124,7 +122,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
