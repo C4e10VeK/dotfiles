@@ -37,12 +37,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
  '(custom-enabled-themes '(gruber-darker))
  '(custom-safe-themes
    '("5f824cddac6d892099a91c3f612fcf1b09bb6c322923d779216ab2094375c5ee" default))
- '(default
-	((t
-	  (:family "JetBrains Mono NL" :foundry "JB" :slant normal :weight normal :height 120 :width normal)))))
+ '(default ((t (:family "JetBrains Mono NL" :foundry "JB" :slant normal :weight normal :height 120 :width normal)))))
 
 
 (add-to-list 'load-path "/directory/containing/neotree/")
@@ -65,3 +64,9 @@
 (add-to-list 'load-path "~/.emacs.d/elpa/autopair-20160304.1237/") ;; comment if autopair.el is in standard load path 
 (require 'autopair)
 (autopair-global-mode) ;; enable autopair in all buffers
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "JetBrains Mono NL" :foundry "JB" :slant normal :weight normal :height 120 :width normal)))))
