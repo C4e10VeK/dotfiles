@@ -70,6 +70,6 @@
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
-(add-to-list 'load-path "/home/a2p1k02/.emacs.d/elpa/autopair-20160304.1237/") ;; comment if autopair.el is in standard load path 
+(add-to-list 'load-path "~/.emacs.d/elpa/autopair-20160304.1237/") ;; comment if autopair.el is in standard load path 
 (require 'autopair)
 (autopair-global-mode) ;; enable autopair in all buffers
