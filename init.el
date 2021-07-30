@@ -3,7 +3,7 @@
 (package-initialize)
 
 (setq package-selected-packages '(lsp-mode yasnippet lsp-treemacs helm-lsp
-    projectile hydra flycheck company avy which-key helm-xref dap-mode neotree all-the-icons gruber-darker-theme))
+    projectile hydra flycheck company avy which-key helm-xref dap-mode))
 
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
   (package-refresh-contents)
@@ -31,9 +31,7 @@
   (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration)
   (require 'dap-cpptools)
   (yas-global-mode))
-(custom-set-variables
- '(custom-enabled-themes '(gruber-darker-theme))
- '(default ((t (:family "JetBrains Mono NL" :foundry "JB" :slant normal :weight normal :height 120 :width normal)))))
+
 
 
 (add-to-list 'load-path "/directory/containing/neotree/")
