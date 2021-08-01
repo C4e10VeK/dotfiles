@@ -57,7 +57,7 @@
 (setq-default c-basic-offset 4)
 (setq-default c++-basic-offset 4)
 
-(setq column-number-mode t)
+(global-display-line-numbers-mode t)
 (setq auto-save-default nil)
 (setq make-backup-files nil)
 
