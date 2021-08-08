@@ -26,5 +26,4 @@ wget -P ~/.emacs.d/elpa/autopair-20160304.1237/ https://raw.githubusercontent.co
 ### Install wallset:
 ```bash
 wget -P ~/wallset.sh https://raw.githubusercontent.com/a2p1k02/dotfiles/main/wallset.sh
-chmod +x wallset.sh
 ```
