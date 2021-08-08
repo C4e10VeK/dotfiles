@@ -22,10 +22,3 @@ mkdir -p ~/.emacs.d/elpa/autopair-20160304.1237
 wget -P ~/.emacs.d/elpa/autopair-20160304.1237/ https://raw.githubusercontent.com/a2p1k02/autopair/master/autopair.el
 
 ```
-
-#### Optinional:
-install wallset:
-
-```bash
-git clone https://github.com/terroo/wallset
-```
