@@ -58,12 +58,23 @@ bindsym $mod+Return exec urxvt
 # kill focused window
 bindsym $mod+Shift+q kill
 
-exec_always feh --randomize --no-fehbg --bg-scale ~/i3-wallpapers
+## Wallpapers
+# static
+#exec_always feh --randomize --no-fehbg --bg-scale ~/i3-wallpapers
 
+# dynamic
+exec_always ./walls.sh auto ~/i3-wallpapers/wallpaper.gif
+
+# Russian language
 exec setxkbmap -model pc104 -layout us,ru -option grp:alt_shift_toggle
 
+# Mouse speed
 exec xinput --set-prop 12 300 -1
 
+# Transparent
+exec_always picom -bc
+
+# Startup polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #Vim
