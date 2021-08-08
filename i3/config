@@ -59,11 +59,11 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 
 ## Wallpaper
-# Rain with train (dynamic)
-exec_always ./wallset.sh auto ~/i3-wallpapers/train.gif
-
 # Default static wallpaper
-#exec_always feh --randomize --no-fehbg --bg-scale ~/i3-wallpapers
+#exec_always feh --no-fehbg --bg-scale ~/i3-wallpapers/train.png
+
+# Dynamic wallpaper
+exec_always ./wallset.sh auto ~/i3-wallpapers/train.mp4
 
 # Russian language
 exec setxkbmap -model pc104 -layout us,ru -option grp:alt_shift_toggle
