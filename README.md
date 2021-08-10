@@ -23,7 +23,7 @@ wget -P ~/.emacs.d/elpa/autopair-20160304.1237/ https://raw.githubusercontent.co
 
 ```
 
-### Install wallset:
+<!-- ### Install wallset:
 ```bash
 wget https://raw.githubusercontent.com/a2p1k02/dotfiles/main/wallset.sh
 chmod +x wallset.sh
@@ -33,3 +33,4 @@ chmod +x wallset.sh
 ```bash
 ffmpeg -f gif -i train.gif train.mp4
 ```
+ -->
