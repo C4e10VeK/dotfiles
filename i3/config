@@ -60,10 +60,10 @@ bindsym $mod+Shift+q kill
 
 ## Wallpaper
 # Default static wallpaper
-#exec_always feh --no-fehbg --bg-scale ~/i3-wallpapers/train.png
+exec_always feh --no-fehbg --bg-scale ~/i3-wallpapers/train.png
 
 # Dynamic wallpaper
-exec_always ./wallset.sh auto ~/i3-wallpapers/train.mp4
+#exec_always ./wallset.sh auto ~/i3-wallpapers/train.mp4
 
 # Russian language
 exec setxkbmap -model pc104 -layout us,ru -option grp:alt_shift_toggle
@@ -72,7 +72,7 @@ exec setxkbmap -model pc104 -layout us,ru -option grp:alt_shift_toggle
 exec xinput --set-prop 12 300 -1
 
 # Transparent
-exec_always picom -bc
+#exec_always picom -bc
 
 # Startup polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
