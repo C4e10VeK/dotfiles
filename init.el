@@ -54,12 +54,6 @@
 
 (dashboard-setup-startup-hook)
 
-;;(setq dashboard-items '((recents)
-;;                        (bookmarks)
-;;                        (projects)
-;;                        (agenda)
-;;                        (registers)))
-
 (defun dashboard-line-generator (list-size)
   (insert ""))
  
@@ -83,6 +77,9 @@
          (lambda (&rest _) (browse-url "https://github.com/a2p1k02"))))))
 
 (setq dashboard-set-init-info t)
+
+(setq dashboard-set-heading-icons t)
+(setq dashboard-set-file-icons t)
 
 (setq dashboard-startup-banner "~/.emacs.d/logo.txt")
 
