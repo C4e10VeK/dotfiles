@@ -60,9 +60,9 @@
 (add-to-list 'dashboard-item-generators '(line . dashboard-line-generator))
  
 (setq dashboard-items '((line)
-            (recents . 5)
-            (line)
             (projects . 5)
+            (line)
+            (recents . 5)
             (line)
             (bookmarks . 5)))
 
