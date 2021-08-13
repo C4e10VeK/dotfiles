@@ -2,8 +2,7 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (package-initialize)
 
-(setq package-selected-packages '(lsp-mode yasnippet lsp-treemacs helm-lsp
-    projectile hydra flycheck company avy ivy which-key dap-mode neotree all-the-icons gruber-darker-theme dashboard))
+(setq package-selected-packages '(lsp-mode yasnippet lsp-treemacs projectile hydra flycheck company avy ivy which-key dap-mode neotree all-the-icons gruber-darker-theme dashboard powerline page-break-lines))
 
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
   (package-refresh-contents)
@@ -55,11 +54,23 @@
 
 (dashboard-setup-startup-hook)
 
-(setq dashboard-items '((recents)
-                        (bookmarks)
-                        (projects)
-                        (agenda)
-                        (registers)))
+;;(setq dashboard-items '((recents)
+;;                        (bookmarks)
+;;                        (projects)
+;;                        (agenda)
+;;                        (registers)))
+
+(defun dashboard-line-generator (list-size)
+  (insert ""))
+ 
+(add-to-list 'dashboard-item-generators '(line . dashboard-line-generator))
+ 
+(setq dashboard-items '((line)
+            (recents . 5)
+            (line)
+            (bookmarks . 5)
+            (line)
+            (agenda . 5)))
 
 (setq dashboard-set-navigator t)
 
@@ -76,7 +87,7 @@
 (setq dashboard-startup-banner "~/.emacs.d/logo.txt")
 
 ;; Content is not centered by default. To center, set
-(setq dashboard-center-content t)
+;;(setq dashboard-center-content t)
 
 ;; To disable shortcut "jump" indicators for each section, set
 (setq dashboard-show-shortcuts nil)
@@ -84,6 +95,8 @@
 (ivy-mode)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
+
+(powerline-default-theme)
 
 (add-to-list 'load-path "~/.emacs.d/elpa/autopair-20160304.1237/") ;; comment if autopair.el is in standard load path 
 (require 'autopair)
