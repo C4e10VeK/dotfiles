@@ -3,18 +3,11 @@
 (package-initialize)
 
 (setq package-selected-packages '(lsp-mode yasnippet lsp-treemacs helm-lsp
-    projectile hydra flycheck company avy which-key helm-xref dap-mode neotree all-the-icons gruber-darker-theme))
+    projectile hydra flycheck company avy ivy which-key dap-mode neotree all-the-icons gruber-darker-theme dashboard))
 
 (when (cl-find-if-not #'package-installed-p package-selected-packages)
   (package-refresh-contents)
   (mapc #'package-install package-selected-packages))
-
-;; sample `helm' configuration use https://github.com/emacs-helm/helm/ for details
-(helm-mode)
-(require 'helm-xref)
-(define-key global-map [remap find-file] #'helm-find-files)
-(define-key global-map [remap execute-extended-command] #'helm-M-x)
-(define-key global-map [remap switch-to-buffer] #'helm-mini)
 
 (which-key-mode)
 (add-hook 'c-mode-hook 'lsp)
@@ -43,7 +36,6 @@
    '("5f824cddac6d892099a91c3f612fcf1b09bb6c322923d779216ab2094375c5ee" default))
  '(default ((t (:family "JetBrains Mono NL" :foundry "JB" :slant normal :weight normal :height 120 :width normal)))))
 
-
 (add-to-list 'load-path "/directory/containing/neotree/")
 (require 'neotree)
 
@@ -60,6 +52,38 @@
 (global-display-line-numbers-mode t)
 (setq auto-save-default nil)
 (setq make-backup-files nil)
+
+(dashboard-setup-startup-hook)
+
+(setq dashboard-items '((recents)
+                        (bookmarks)
+                        (projects)
+                        (agenda)
+                        (registers)))
+
+(setq dashboard-set-navigator t)
+
+;; Format: "(icon title help action face prefix suffix)"
+(setq dashboard-navigator-buttons
+      `(;; line1
+        ((,(all-the-icons-octicon "mark-github" :height 1.1 :v-adjust 0.0)
+         "Homepage"
+         "Browse homepage"
+         (lambda (&rest _) (browse-url "https://github.com/a2p1k02"))))))
+
+(setq dashboard-set-init-info t)
+
+(setq dashboard-startup-banner "~/.emacs.d/logo.txt")
+
+;; Content is not centered by default. To center, set
+(setq dashboard-center-content t)
+
+;; To disable shortcut "jump" indicators for each section, set
+(setq dashboard-show-shortcuts nil)
+
+(ivy-mode)
+(setq ivy-use-virtual-buffers t)
+(setq enable-recursive-minibuffers t)
 
 (add-to-list 'load-path "~/.emacs.d/elpa/autopair-20160304.1237/") ;; comment if autopair.el is in standard load path 
 (require 'autopair)
