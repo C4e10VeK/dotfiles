@@ -28,6 +28,15 @@ wget -P ~/.emacs.d/elpa/autopair-20160304.1237/ https://raw.githubusercontent.co
 wget -P ~/.emacs.d/ https://raw.githubusercontent.com/a2p1k02/dotfiles/main/logo.txt
 ```
 
+### Install all for Emacs:
+```bash
+mkdir -p ~/.emacs.d/
+wget -P ~/.emacs.d/ https://raw.githubusercontent.com/a2p1k02/dotfiles/main/init.el
+mkdir -p ~/.emacs.d/elpa/autopair-20160304.1237
+wget -P ~/.emacs.d/elpa/autopair-20160304.1237/ https://raw.githubusercontent.com/a2p1k02/autopair/master/autopair.el
+wget -P ~/.emacs.d/ https://raw.githubusercontent.com/a2p1k02/dotfiles/main/logo.txt
+```
+
 <!-- ### Install wallset:
 ```bash
 wget https://raw.githubusercontent.com/a2p1k02/dotfiles/main/wallset.sh
