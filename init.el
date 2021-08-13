@@ -62,9 +62,9 @@
 (setq dashboard-items '((line)
             (recents . 5)
             (line)
-            (bookmarks . 5)
+            (projects . 5)
             (line)
-            (agenda . 5)))
+            (bookmarks . 5)))
 
 (setq dashboard-set-navigator t)
 
@@ -92,6 +92,8 @@
 (ivy-mode)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
+
+(projectile-mode +1)
 
 (powerline-default-theme)
 
