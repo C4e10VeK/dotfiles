@@ -1,0 +1,56 @@
+general {
+    output_format = "i3bar"
+    colors = true
+    color_good = "#899AFF"
+    color_degraded = "#52AD91"
+    color_bad = "#7882BF"
+}
+
+order += "disk /"
+order += "ethernet eth0"
+order += "memory"
+order += "load"
+order += "tztime calendar"
+order += "tztime time"
+order += "volume master"
+
+ethernet eth0 {
+        format_up = "E: %ip (%speed)"
+        format_down = "E: down"
+}
+
+tztime calendar {
+        format = "Calendar: %Y-%m-%d"
+        timezone = "Europe/Moscow"
+}
+
+tztime time {
+        format = "Time: %H:%M:%S"
+        timezone = "Europe/Moscow"
+}
+
+load {
+        format = "CPU %5min%"
+}
+
+memory {
+        format = "RAM: %used"
+        threshold_degraded = "10%"
+        format_degraded = "MEMORY: %free"
+}
+
+disk "/" {
+        format = "Free space for Porn: %free"
+}
+
+read_file uptime {
+        path = "/proc/uptime"
+}
+
+volume master {
+        format = "(:: %volume "
+        format_muted = "(x %volume "
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
