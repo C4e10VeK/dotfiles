@@ -37,6 +37,12 @@ wget -P ~/.emacs.d/elpa/autopair-20160304.1237/ https://raw.githubusercontent.co
 wget -P ~/.emacs.d/ https://raw.githubusercontent.com/a2p1k02/dotfiles/main/logo.txt
 ```
 
+### Install for fonts:
+```bash
+cd dotfiles/fonts
+sudo cp -r material_design_iconic_font.ttf /usr/share/fonts/
+```
+
 <!-- ### Install wallset:
 ```bash
 wget https://raw.githubusercontent.com/a2p1k02/dotfiles/main/wallset.sh
