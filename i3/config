@@ -53,7 +53,7 @@ new_float pixel 6
 new_window pixel 6 
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -61,9 +61,6 @@ bindsym $mod+Shift+q kill
 ## Wallpaper
 # Default static wallpaper
 exec_always feh --randomize --no-fehbg --bg-scale ~/i3-wallpapers
-
-# Dynamic wallpaper
-#exec_always ./wallset.sh auto ~/i3-wallpapers/train.mp4
 
 # Russian language
 exec setxkbmap -model pc104 -layout us,ru -option grp:alt_shift_toggle
@@ -77,14 +74,8 @@ exec xinput --set-prop 12 300 -1
 # Startup polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh --grayblocks
 
-#Vim
-bindsym $mod+Shift+b exec urxvt -e vim
-
 #Emacs
 bindsym $mod+Shift+m exec emacs
-
-#start dmenu
-#bindsym $mod+d exec dmenu_run 
 
 # start rofi (a program launcher)
 bindsym $mod+d exec $HOME/.config/polybar/grayblocks/scripts/launcher.sh
@@ -293,4 +284,3 @@ mode "$mode_gaps_outer" {
 #        urgent_workspace    #2e394a #2e394a #e7dfd9
 #    }
 #}
-
