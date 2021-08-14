@@ -83,11 +83,8 @@ bindsym $mod+Shift+b exec urxvt -e vim
 #Emacs
 bindsym $mod+Shift+m exec emacs
 
-#start dmenu
-bindsym $mod+d exec "dmenu_run -nf '#BBBBBB' -nb '#1B1B1B' -sb '#6673BF' -sf '#EEEEEE' -fn 'Jetbrains-10' -p 'dmenu prompt &gt;'"
-
 # start rofi (a program launcher)
-#bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
