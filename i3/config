@@ -60,7 +60,7 @@ bindsym $mod+Shift+q kill
 
 ## Wallpaper
 # Default static wallpaper
-exec_always feh --randomize --no-fehbg --bg-scale ~/i3-wallpapers
+exec_always feh --no-fehbg --bg-scale ~/i3-wallpapers/bg_16.jpg
 
 # Russian language
 exec setxkbmap -model pc104 -layout us,ru -option grp:alt_shift_toggle
