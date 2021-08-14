@@ -40,7 +40,7 @@ wget -P ~/.emacs.d/ https://raw.githubusercontent.com/a2p1k02/dotfiles/main/logo
 ### Install for fonts:
 ```bash
 cd dotfiles/fonts
-sudo cp -r material_design_iconic_font.ttf /usr/share/fonts/
+sudo cp -r material_design_iconic_font.ttf waffle.bdf /usr/share/fonts/
 ```
 
 <!-- ### Install wallset:
