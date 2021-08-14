@@ -39,8 +39,7 @@
 
 
 URxvt.scrollBar: false
-!URxvt.font: xft:JetBrains Mono NL:size=12
-URxvt.font: xft:Misc Tamsyn:style=Regular:size=12
+URxvt.font: xft:Iosevka:size=12
 URxvt.letterSpace: -1
 URxvt.iso14755: false
 URxvt.iso14755_52: false
