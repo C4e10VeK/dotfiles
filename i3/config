@@ -60,7 +60,7 @@ bindsym $mod+Shift+q kill
 
 ## Wallpaper
 # Default static wallpaper
-exec_always feh --no-fehbg --bg-scale ~/i3-wallpapers/train.png
+exec_always feh --randomize --no-fehbg --bg-scale ~/i3-wallpapers
 
 # Dynamic wallpaper
 #exec_always ./wallset.sh auto ~/i3-wallpapers/train.mp4
