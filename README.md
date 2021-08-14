@@ -39,7 +39,7 @@ wget -P ~/.emacs.d/ https://raw.githubusercontent.com/a2p1k02/dotfiles/main/logo
 
 ### Install for fonts:
 ```bash
-yay -S siji-git
+yay -S siji-git ttf-icomoon-feather
 ```
 
 <!-- ### Install wallset:
