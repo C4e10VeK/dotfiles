@@ -75,7 +75,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 bindsym $mod+Shift+m exec emacs
 
 # start rofi (a program launcher)
-bindsym $mod+d rofi -show drun
+bindsym $mod+d exec rofi -show drun
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
