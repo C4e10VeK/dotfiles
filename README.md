@@ -37,10 +37,10 @@ wget -P ~/.emacs.d/elpa/autopair-20160304.1237/ https://raw.githubusercontent.co
 wget -P ~/.emacs.d/ https://raw.githubusercontent.com/a2p1k02/dotfiles/main/logo.txt
 ```
 
-### Install for fonts:
+<!-- ### Install for fonts:
 ```bash
-yay -S siji-git ttf-icomoon-feather
-```
+
+``` -->
 
 <!-- ### Install wallset:
 ```bash
