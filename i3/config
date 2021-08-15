@@ -60,7 +60,7 @@ bindsym $mod+Shift+q kill
 
 ## Wallpaper
 # Default static wallpaper
-exec_always feh --no-fehbg --bg-scale ~/i3-wallpapers/bg_16.jpg
+exec_always feh --randomize --no-fehbg --bg-scale ~/i3-wallpapers
 
 # Russian language
 exec setxkbmap -model pc104 -layout us,ru -option grp:alt_shift_toggle
@@ -68,17 +68,14 @@ exec setxkbmap -model pc104 -layout us,ru -option grp:alt_shift_toggle
 # Mouse speed
 exec xinput --set-prop 12 300 -1
 
-# Transparent
-#exec_always picom -bc
-
 # Startup polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh --grayblocks
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #Emacs
 bindsym $mod+Shift+m exec emacs
 
 # start rofi (a program launcher)
-bindsym $mod+d exec $HOME/.config/polybar/grayblocks/scripts/launcher.sh
+bindsym $mod+d rofi -show drun
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
