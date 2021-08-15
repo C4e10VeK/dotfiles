@@ -43,7 +43,6 @@
 (global-set-key [f8] 'neotree-toggle)
 
 (setq neo-theme (if (display-graphic-p) 'icons 'all-the-icons))
-(all-the-icons-install-fonts)
 
 (setq-default tab-width 4)
 (setq-default c-basic-offset 4)
