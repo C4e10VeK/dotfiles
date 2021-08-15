@@ -37,10 +37,10 @@ wget -P ~/.emacs.d/elpa/autopair-20160304.1237/ https://raw.githubusercontent.co
 wget -P ~/.emacs.d/ https://raw.githubusercontent.com/a2p1k02/dotfiles/main/logo.txt
 ```
 
-<!-- ### Install for fonts:
+### Install for fonts:
 ```bash
-yay -S siji-git
-``` -->
+sudo pacman -Syu ttc-iosevka ttc-iosevka-aile ttc-iosevka-curly ttc-iosevka-curly-slab ttc-iosevka-etoile ttc-iosevka-slab ttc-iosevka-ss01 ttc-iosevka-ss02 ttc-iosevka-ss02 ttc-iosevka-ss03 ttc-iosevka-ss04 ttc-iosevka-ss05 ttc-iosevka-ss06 ttc-iosevka-ss07 ttc-iosevka-ss08 ttc-iosevka-ss09 ttc-iosevka-ss10 ttc-iosevka-ss11 ttc-iosevka-ss12 ttc-iosevka-ss13 ttc-iosevka-ss14 ttc-iosevka-ss15 ttc-iosevka-ss16 ttc-iosevka-ss17 ttc-iosevka-ss18 ttf-font-awesome
+```
 
 <!-- ### Install wallset:
 ```bash
