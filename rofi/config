@@ -1,2 +1,2 @@
-rofi.theme    dmenu
-rofi.theme: 	/usr/share/rofi/themes/dmenu.rasi
+rofi.theme 	Arc-Dark
+rofi.theme: 	/usr/share/rofi/themes/Arc-Dark.rasi
