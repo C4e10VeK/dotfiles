@@ -1,0 +1,294 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;	This config was made by a2p1k02
+;	https://github.com/a2p1k02
+;
+;==========================================================
+
+[colors]
+;background = ${xrdb:color0:#222}
+background = #1b1b1b
+background-alt = #4c566a
+;foreground = ${xrdb:color7:#222}
+foreground = #ffffff
+foreground-alt = #555
+primary = #899aff
+secondary = #52ad91
+alert = #6673bf
+
+
+[bar/example]
+monitor = ${env:MONITOR:}
+width = 100%
+height = 40
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+bottom = true
+
+line-size = 6
+
+border-top-size = 4
+border-top-color = ${colors.primary}
+
+padding-left = 2
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = "Iosevka Term:style=Regular:size=10"
+font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
+font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
+font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
+
+modules-left = i3 cpu memory filesystem
+modules-center = xwindow
+modules-right = date xkeyboard pulseaudio powermenu
+
+tray-position = right
+tray-padding = 2
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[module/xwindow]
+type = internal/xwindow
+label =  %title:0:30:...%
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-background = #3d3d3d
+format-padding = 2
+
+format-overline = #1b1b1b
+format-underline = #1b1b1b
+
+label-layout = " %layout%"
+
+label-indicator-padding = 2
+label-indicator-background = #3d3d3d
+
+[module/filesystem]
+type = internal/fs
+interval = 1
+
+mount-0 = /
+
+format-mounted-background = #3d3d3d
+format-mounted-overline = #1b1b1b
+format-mounted-underline = #1b1b1b
+format-mounted-padding = 2
+
+label-mounted = " %free%"
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+;pin-workspaces = true
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+; focused = Active workspace on focused monitor
+label-focused = %name%
+label-focused-background = #3d3d3d
+label-focused-underline = #1b1b1b
+label-focused-overline = #1b1b1b
+label-focused-padding = 2
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %name%
+label-unfocused-padding = 2
+
+; visible = Active workspace on unfocused monitor
+label-visible = %name%
+label-visible-background = #3d3d3d
+label-visible-underline = #1b1b1b
+label-visible-overline = #1b1b1b
+label-visible-padding = 2
+
+; urgent = Workspace with urgency hint set
+label-urgent = %name%
+label-urgent-background = #3d3d3d
+label-urgent-padding = 2
+
+; Separator in between workspaces
+; label-separator = |
+
+[module/cpu]
+type = internal/cpu
+; Seconds to sleep between updates
+; Default: 1
+interval = 1
+
+format-background = #3d3d3d
+format-prefix = " "
+
+label-font = 1
+
+; Available tags:
+;   <label> (default)
+;   <bar-load>
+;   <ramp-load>
+;   <ramp-coreload>
+format = <label> 
+
+format-overline = #1b1b1b
+format-underline = #1b1b1b
+
+format-padding = 2
+
+; Available tokens:
+;   %percentage% (default) - total cpu load
+;   %percentage-cores% - load percentage for each core
+;   %percentage-core[1-9]% - load percentage for specific core
+label = "%percentage%%"
+
+[module/memory]
+;https://github.com/jaagr/polybar/wiki/Module:-memory
+type = internal/memory
+interval = 1
+; Available tokens:
+;   %percentage_used% (default)
+;   %percentage_free%
+;   %gb_used%
+;   %gb_free%
+;   %gb_total%
+;   %mb_used%
+;   %mb_free%
+;   %mb_total%
+label = "%mb_used%"
+
+;format = Mem <label>
+format-prefix = " "
+format-padding = 2
+;format-prefix-foreground = #
+;format-foreground = #fefefe
+format-background = #3d3d3d
+
+format-underline = #1b1b1b
+format-overline = #1b1b1b
+
+[module/date]
+;https://github.com/jaagr/polybar/wiki/Module:-date
+type = internal/date
+; Seconds to sleep between updates
+interval = 1
+; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
+; NOTE: if you want to use syntax tags here you need to use %%{...}
+;date-alt = " %a %b %d, %Y"
+time = " %l:%M:%S"
+time-alt = " %a %b %d, %Y"
+;time-alt = %l:%M%:%S
+format-background = #3d3d3d
+format-padding = 2
+;format-prefix = " "
+;format-prefix-foreground = #fefefe
+;format-foreground = #fefefe
+label = %time%
+
+format-underline = #1b1b1b
+format-overline = #1b1b1b
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <label-volume> <bar-volume>
+label-volume =  %percentage%%
+format-volume-background = #3d3d3d
+format-volume-padding = 2
+format-volume-underline = #1b1b1b
+format-volume-overline = #1b1b1b
+
+;label-volume-foreground = ${root.foreground}
+
+label-muted = 
+format-muted-background = #3d3d3d
+format-muted-padding = 2
+format-muted-underline = #1b1b1b
+format-muted-overline = #1b1b1b
+;label-muted-foreground = #666
+
+bar-volume-width = 10
+bar-volume-foreground-0 = #899aff
+bar-volume-foreground-1 = #899aff
+bar-volume-foreground-2 = #899aff
+bar-volume-foreground-3 = #52ad91
+bar-volume-foreground-4 = #52ad91
+bar-volume-foreground-5 = #52ad91
+bar-volume-foreground-6 = #52ad91
+bar-volume-gradient = true
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = -
+bar-volume-fill-font = 2
+bar-volume-empty = -
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+format-padding = 2
+
+label-open = 
+label-open-foreground = #899aff
+label-close =  cancel
+label-close-foreground = #899aff
+label-separator = |
+label-separator-foreground = #7882bf
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
+[settings]
+screenchange-reload = false
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+; vim:ft=dosini
