@@ -89,6 +89,8 @@ set fileencodings=utf8,cp1251
 set clipboard=unnamed
 set ruler
 
+set ttymouse=xterm
+
 set hidden
 
 set visualbell t_vb=
