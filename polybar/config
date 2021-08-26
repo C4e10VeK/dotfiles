@@ -56,7 +56,7 @@ font-1 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
 font-2 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
 font-3 = "Font Awesome 5 Brands:pixelsize=10;1"
 
-modules-left = i3 cpu memory filesystem
+modules-left = i3 cpu memory filesystem battery
 modules-center = xwindow
 modules-right = date xkeyboard pulseaudio powermenu
 
@@ -136,6 +136,17 @@ label-urgent-padding = 2
 
 ; Separator in between workspaces
 ; label-separator = |
+
+[module/battery]
+type = internal/battery
+interval = 1
+format-background = #3d3d3d
+;format-prefix = "%"
+
+label-font = 1
+format = <label>
+
+label = "percentage%"
 
 [module/cpu]
 type = internal/cpu
@@ -269,15 +280,15 @@ menu-0-0-exec = menu-open-1
 menu-0-1 = power off
 menu-0-1-exec = menu-open-2
 
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
+menu-1-1 = cancel
+menu-1-1-exec = menu-open-0
+menu-1-0 = reboot
+menu-1-0-exec = systemctl reboot
 
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
+menu-2-1 = power off
+menu-2-1-exec = systemctl poweroff
+menu-2-0 = cancel
+menu-2-0-exec = menu-open-0
 
 [settings]
 screenchange-reload = false
