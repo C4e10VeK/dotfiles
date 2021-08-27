@@ -81,6 +81,8 @@ set showtabline=1
 set wrap
 set linebreak
 
+set ttymouse=sgr
+
 set nobackup
 set noswapfile
 set encoding=utf-8
