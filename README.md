@@ -2,6 +2,7 @@
 
 ### Install Vundle for Vim:
 ```bash
+wget https://raw.githubusercontent.com/a2p1k02/dotfiles/main/.vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 ```
