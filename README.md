@@ -7,6 +7,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 ```
 
+### Install Coc.Nvim 
 ```bash
 cd .vim/bundle/coc.nvim/ && yarn install
 ```
