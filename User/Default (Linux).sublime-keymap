@@ -1,5 +1,0 @@
-[
-	{ "keys": ["ctrl+alt+t"], "command": "terminus_open", "args": 
-		{"panel_name": "Terminus"}
-	}
-]
